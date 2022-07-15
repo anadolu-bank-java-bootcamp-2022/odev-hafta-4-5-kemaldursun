@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Maven Clean Should Work&#33;",
+      "setup": "",
+      "run": "mvn clean",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 100
+    },
+    {
+      "name": "Database Initialization",
+      "setup": "",
+      "run": "docker-compose -f \"docker-compose.yaml\" up -d",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
+      "name": "Package Jar",
+      "setup": "",
+      "run": "mvn install",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    }
+  ]
+}
