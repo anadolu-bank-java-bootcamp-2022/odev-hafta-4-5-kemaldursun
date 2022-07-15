@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: postgres:13.6
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=toor
+      - POSTGRES_DB=swapper
+    ports:
+      - "5330:5432"
+    volumes:
+      - ./compose/db/init.sql:/docker-entrypoint-initdb.d/init.sql
