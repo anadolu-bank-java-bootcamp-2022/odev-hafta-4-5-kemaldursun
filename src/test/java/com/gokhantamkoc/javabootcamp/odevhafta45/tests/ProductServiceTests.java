@@ -4,6 +4,7 @@ import com.gokhantamkoc.javabootcamp.odevhafta45.model.Product;
 import com.gokhantamkoc.javabootcamp.odevhafta45.repository.ProductRepository;
 import com.gokhantamkoc.javabootcamp.odevhafta45.service.ProductService;
 import com.gokhantamkoc.javabootcamp.odevhafta45.util.DatabaseConnection;
+import lombok.Data;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,7 @@ public class ProductServiceTests {
     private ProductService productService;
 
     @Before
+
     public void setup() {
         this.productService = new ProductService(
                 new ProductRepository(new DatabaseConnection())

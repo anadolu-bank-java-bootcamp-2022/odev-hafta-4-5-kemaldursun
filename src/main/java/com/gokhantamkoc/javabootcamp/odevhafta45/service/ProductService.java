@@ -2,6 +2,7 @@ package com.gokhantamkoc.javabootcamp.odevhafta45.service;
 
 import com.gokhantamkoc.javabootcamp.odevhafta45.model.Product;
 import com.gokhantamkoc.javabootcamp.odevhafta45.repository.ProductRepository;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,21 +18,13 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public void createProduct(Product newProduct) {
-        // BU METHODU 1. GOREV ICIN DOLDURUNUZ
-    }
+    public void createProduct(Product newProduct) { productRepository.save(newProduct); }
 
-    public Product getProduct(long id) {
-        // BU METHODU 1. GOREV ICIN DOLDURUNUZ
-    }
+    public Product getProduct(long id) { return productRepository.get(id); }
 
-    public void updateProduct(Product product) {
-        // BU METHODU 1. GOREV ICIN DOLDURUNUZ
-    }
+    public void updateProduct(Product product) { productRepository.update(product); }
 
-    public List<Product> listProduct() {
-        // BU METHODU 1. GOREV ICIN DOLDURUNUZ
-    }
+    public List<Product> listProduct() { return productRepository.getAll(); }
 
     // BU METHODU SILMEYINIZ YOKSA TESTLER CALISMAZ
     public boolean deleteProduct(long id) {
